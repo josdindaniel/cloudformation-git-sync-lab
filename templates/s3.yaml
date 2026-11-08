@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Laboratorio inicial de CloudFormation Git Sync
+
+Resources:
+  LabBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      Tags:
+        - Key: Project
+          Value: GitSyncLab
+
+Outputs:
+  BucketName:
+    Description: Nombre del bucket creado
+    Value: !Ref LabBucket
