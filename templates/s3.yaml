@@ -2,6 +2,15 @@ AWSTemplateFormatVersion: '2010-09-09'
 
 Description: Laboratorio inicial de CloudFormation Git Sync
 
+Parameters:
+  EnvironmentName:
+    Type: String
+    Description: Nombre del ambiente de despliegue
+    Default: Development
+    AllowedValues:
+      - Development
+      - Laboratory
+
 Resources:
   LabBucket:
     Type: AWS::S3::Bucket
@@ -10,7 +19,7 @@ Resources:
         - Key: Project
           Value: GitSyncLab
         - Key: Environment
-          Value: Development
+          Value: !Ref EnvironmentName
 
 Outputs:
   BucketName:
