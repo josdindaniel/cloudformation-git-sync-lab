@@ -5,6 +5,7 @@ Description: Laboratorio inicial de CloudFormation Git Sync
 Resources:
   LabBucket:
     Type: AWS::S3::Bucket
+    InvalidPropertyForLab: true
     Properties:
       Tags:
         - Key: Project
