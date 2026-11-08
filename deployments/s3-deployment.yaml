@@ -1,3 +1,5 @@
 template-file-path: templates/s3.yaml
-parameters: {}
+parameters:
+  parameters:
+  EnvironmentName: lab
 tags: {}
