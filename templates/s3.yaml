@@ -3,6 +3,9 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Laboratorio inicial de CloudFormation Git Sync
 
 Parameters:
+  CostCenterParameter:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: Centro de costos almacenado en Parameter Store
   EnvironmentName:
     Type: String
     Description: Nombre del ambiente de despliegue
@@ -22,6 +25,8 @@ Resources:
           Value: GitSyncLab
         - Key: Environment
           Value: !Ref EnvironmentName
+        - Key: CostCenter
+          Value: !Ref CostCenterParameter
 
 Outputs:
   BucketName:
