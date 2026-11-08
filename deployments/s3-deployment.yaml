@@ -1,4 +1,7 @@
 template-file-path: templates/s3.yaml
 parameters:
   EnvironmentName: lab
-tags: {}
+tags:
+  CostCenter: "12345"
+  Owner: CloudTeam
+  ManagedBy: GitSync
