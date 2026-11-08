@@ -10,6 +10,8 @@ Parameters:
     AllowedValues:
       - Development
       - Laboratory
+      - dev
+      - lab
 
 Resources:
   LabBucket:
