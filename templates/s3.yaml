@@ -9,6 +9,8 @@ Resources:
       Tags:
         - Key: Project
           Value: GitSyncLab
+        - Key: Environment
+          Value: Development
 
 Outputs:
   BucketName:
