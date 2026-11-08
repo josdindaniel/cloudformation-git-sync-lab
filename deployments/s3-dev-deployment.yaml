@@ -1,4 +1,4 @@
 template-file-path: templates/s3.yaml
 parameters: 
-  EnvironmentName: Development
+  EnvironmentName: dev
 tags: {}
