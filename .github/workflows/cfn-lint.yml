@@ -1,0 +1,33 @@
+name: Validate CloudFormation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-cloudformation:
+    name: cfn-lint
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install cfn-lint
+        run: pip install cfn-lint
+
+      - name: Validate CloudFormation templates
+        run: |
+          cfn-lint \
+            --non-zero-exit-code error \
+            -r us-east-1 \
+            -t templates/*.yaml
