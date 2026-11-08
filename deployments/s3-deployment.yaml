@@ -5,3 +5,4 @@ parameters:
 tags:
   Owner: CloudTeam
   ManagedBy: GitSync
+  SSMRefreshTest: "test-01"
